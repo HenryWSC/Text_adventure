@@ -59,3 +59,4 @@ print ("nice job")
 QES = ["you find yourself in a forest, what will you do"]
 
 OPT = ["north","east","west"]
+print("yes")
