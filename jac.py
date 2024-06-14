@@ -52,26 +52,6 @@ while True:
     print("you find yourself further into the woods")
     question2 = "where will you go"
 
-<<<<<<< HEAD
-             ##########################                        # 
-                                      #                        #    
-                                      #                        #     
-                                      #                        #    
-                                      #                        #   
-                                      #                        #    
-                                      #                        #     
-                                      #                        #    
-             ###################################################  
-                                      #    
-                                      #
-                                      #
-                                      #
-                                      #    
-                                      #   
-                                      #    
-                                      #    
-                                      #    
-                                      ########################## 
         
     
     
@@ -84,13 +64,7 @@ while True:
     
     
     break
-=======
+
 
 print ("nice job")
 
-
-QES = ["you find yourself in a forest, what will you do"]
-
-OPT = ["north","east","west"]
-print("yes")
->>>>>>> f27339c5283c3df538f07ea501b7b302544c443f
