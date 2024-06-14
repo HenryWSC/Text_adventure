@@ -1,29 +1,73 @@
+
 #starting beach
 print("you run throught the woods and see a break in the trees, as you break throught the tree lines you see a beach and hear crashes of waves. you seem safe.")
 
 print("as you walk along the beach you come across a light house it seems old and abandoned")
-question = input
+
+H_question = "what will you do"
+a = "continue walking along the beach"
+b = "go into the lighthouse"
+answer = input("{}\nA.{} B.{}".format(H_question, a, b)).lower()
 
 
+if answer == a or answer == "a":
+        print("you continue walking along the beach until you find a wrecked rowboat")
+       
+#wrecked boat
+        H_question2 = "what will you do"
+a = "Investigate the boat"
+b = "go back to light house"
+answer = input("{}\nA.{} B.{}".format(H_question, a, b)).lower()
+if answer == a or answer == "a":
+        print("you investigate the row boat and find string, a stick, a sharp flint and wood kindle")
+#Investigate row boat
+H_question3 = "what will you do"
+a = "make a fire"
+b = "make a spear"
+c = "make a torch"
+answer = input("{}\nA.{} B.{} C.{}".format(H_question, a, b)).lower()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if answer == a or answer == "a":
+        print("you continue walking along the beach until you find a wrecked rowboat")
+       
+        #wrecked boat
+       
+if answer == a or answer == "a":
+       print("you continue walking along the beach until you find a wrecked rowboat")
+       
+elif answer == b or answer == "b":
+       print("you enter the lighthouse and you see a small chest, you open it and find a scroll telling you to get to Duras as quickly as possible")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer:
+       print("")
+else:
+             
+       print("thats not an answer")
+#Investigate row boat ends
+       
+if answer == a or answer == "a":
+       print("you continue walking along the beach until you find a wrecked rowboat")
+       
+elif answer == b or answer == "b":
+       print("you enter the lighthouse and you see a small chest, you open it and find a scroll telling you to get to Duras as quickly as possible")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer:
+       print("")
+else:
+             
+       print("thats not an answer")
+#wrecked boat
+       
+if answer == a or answer == "a":
+       print("you continue walking along the beach until you find a wrecked rowboat")
+       
+elif answer == b or answer == "b":
+       print("you enter the lighthouse and you see a small chest, you open it and find a scroll telling you to get to Duras as quickly as possible")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer:
+       print("")
+else:
+             
+       print("thats not an answer")
+       
 
 
 
@@ -508,5 +552,3 @@ question = input
 #            ["run", "fight"]]
 #SHORT_OPTIONS =["a", "b", "c"]
 #ANSWERS = []
-
-

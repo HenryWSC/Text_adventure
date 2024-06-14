@@ -1,3 +1,18 @@
+#game start up
+arcana = 0
+MAX_ARCANA = 30
+hp = 20
+has_firebolt = False
+has_armour = False 
+has_spear = False 
+has_torch = False 
+
+def FIREBOLT():
+    if arcana == 0:
+       input("you have used all your arcana")
+    else:
+        arcana =- 10
+        
 #intro
 start = input("welcome adventurer are you ready to enter the world of the infinity acres")
 if start == "yes":
