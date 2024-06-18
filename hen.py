@@ -1,3 +1,181 @@
+#starting beach real
+STORY = [["you travel to duras","you find a small wrecked boat, you investigat the boat and find string, a stick, a sharp stone and some wood kindle",
+              "do you make a torch, spear or fire", "you make a fire",
+              "smoke plums from the fire and could attract animals, do you put it out?",
+              "you keep the fire going and after a while you hear wolves howling and you hear shuffling behind you. You look behind and see 5 wolves coming out the forest",
+              "you fight", "you fight", "you fight", "you fight",
+              "you die from the wolves"]
+              [#lighthouse 
+              "you enter the lighthouse and find a letter telling you to get to the kingdom of duras ASAP", 
+               "you start to feel hungry, do you go to the forest to find food or go to duras?",
+               "you see 3 goblins is the distance blocking the entrance to the duras kingdom, do you approach them or do into the forest?"
+               #setting sun
+               "you go into the forest to look for food and you find a bush of berries"
+               #smoke plums
+               "you put out the fire and it starts to get cold since its now midnight do you go get food or go to sleep", 
+               "you die from hyperthermia",
+               #wolf attack 
+               "you run from the wolf attacking you and enter the woods you survive on 3 HP" ]]
+
+OPTIONS = [["enter the lighthouse", "go along the beach"],
+           ["go to duras", "go to the forest to look for food"],
+           ["continue along the beach", "enter the lighthouse"],
+           ["go back to the light house","investigate the boat"],
+            ["make a fire", "make a spear", "make a torch"],
+            ["look for food", "make fire"],
+            ["put out the fire", "keep the fire going"],
+            ["put out the fire", "keep the fire going despite the warning"],
+            ["run", "fight"]]
+SHORT_OPTIONS =["a", "b", "c"]
+ANSWERS = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #starting beach
 print("you run throught the woods and see a break in the trees, as you break throught the tree lines you see a beach and hear crashes of waves. you seem safe.")
@@ -525,30 +703,3 @@ else:
 
 
 
-
-
-
-
-
-
-#QUESTIONS = ["what will you do?",
- #            "you start to feel hungry do you go to the forest to find food? or do to duras?",
-  #           "do you continue along the beach or enter lighthouse",
-   #         "do you want to make a fire?, make a spear? or make a torch?",
-    #         "its getting late and your even more hungry will you go to the forest to look for food? or make a fire?",
-     #        "lots fo smoke plums from the fire that could attract animals do you want to put out the fire?",
-      #       "it starts to getting cold and its midnight and your still starving do you want to look for food? or go to sleep?",
-       #      "you hear wolves howl in the distance do you put out the fire?",
-#             "you hear shuffling behind you before suddenly 5 wolves appear behind you, do you run or fight?",
-#             "do you want to keep fighting or run?"]
-#OPTIONS = [["enter the lighthouse", "go along the beach"],
-#           ["go to duras", "go to the forest to look for food"],
-#           ["continue along the beach", "enter the lighthouse"],
-#           ["go back to the light house","investigate the boat"],
-#            ["make a fire", "make a spear", "make a torch"],
-#            ["look for food", "make fire"],
-#            ["put out the fire", "keep the fire going"],
-#            ["put out the fire", "keep the fire going despite the warning"],
-#            ["run", "fight"]]
-#SHORT_OPTIONS =["a", "b", "c"]
-#ANSWERS = []
