@@ -49,46 +49,84 @@ while True:
         print("")
     else:
         print("thats not an answer")
-    
-# major crossroad north,east and west
-    print("you find yourself further into the woods")
+        
+    # major crossroad north,east and west
+        print("you find yourself further into the woods")
 
-question2 = "what direction will you go"
-a = "north"
-b = "east"
-c = "west"
-answer = input("{}\nA.{} B.{} C.{}".format(question, a, b, c)).lower()
+    question2 = "what direction will you go"
+    a = "north"
+    b = "east"
+    c = "west"
+    answer = input("{}\nA.{} B.{} C.{}".format(question, a, b, c)).lower()
 
-#----------------------------noth / main path---------------------------
-if answer == a or answer == "a":
-    print("you find a cabin!")
-
-#----------------------------east / short sidetrack---------------------
-elif answer == b or answer == "b":
-    print("you find a bush of berries")
-    question3 = "what would you like to do now "
-    a = "gather berries"
-    b = "go deeper into the woods"
-    answer2 = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
-
+    #----------------------------noth / main path---------------------------
     if answer == a or answer == "a":
-        print("you start picking up the berries but then hear a howling in the distance")
-    
-    elif answer2 ==  b or answer == "b":
-        print("you look around and see nothing but a small cabin")
-    
-    elif answer2 != a and answer != "a" and answer != b and answer != "b" and answer:
+        print("you find a cabin!")
+        print("you see a small chest in the middle of the room")
+        print("you open it an see a spell scroll that contains firebolt")
+        
+
+    #----------------------------east / short sidetrack---------------------
+    elif answer == b or answer == "b":
+        print("you find a bush of berries")
+        
+        question3 = "what would you like to do now "
+        a = "gather berries"
+        b = "go deeper into the woods"
+        answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+#----------------------------------answer a-------------------------------------
+        if answer == a or answer == "a":
+            print("you start picking up the berries but then hear a howling in the distance")
+            question = "you quickly put all the berries into your bag and run away"
+            a = "run north"
+            b = "run west"
+            answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+            if answer == a or answer == "a":
+                print("you run north untill you find a a cabin")
+#-----------------------------------link to beach answer b-------------------------------                
+            elif answer ==  b or answer == "b":
+                print("you run west untill you stumble onto a deserted beach")
+                
+            elif answer != a and answer != "a" and answer != b and answer != "b" and answer:
+                print("huh")
+            else:
+                print("that is not an answer")
+
+#------------------------------------answer b go north-------------------------------------
+        elif answer ==  b or answer == "b":
+            print("you look around and see nothing but a small cabin in the distance")
+        
+        elif answer != a and answer != "a" and answer != b and answer != "b" and answer:
+            print("huh")
+        else:
+            print("that is not an answer")
+
+
+    #----------------------------west / big sidetrack ----------------------
+    elif answer == c or answer == "c":
+        print("you find a beach")
+
+
+    elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer:
         print("huh")
     else:
-        print("that is not an answer")
+        print("thas is not an answer")
 
 
-#----------------------------west / big sidetrack ----------------------
-elif answer == c or answer == "c":
-    print("you find a beach")
 
 
-elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer:
-    print("huh")
-else:
-    print("thas is not an answer")
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("gg")
