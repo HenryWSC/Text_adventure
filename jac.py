@@ -91,7 +91,9 @@ while True:
             answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
             if answer == a or answer == "a":
-                print("you try to run from the goblins but you take 9 damage from each goblin")
+                print("you try to run from the goblins but they throw a dagger at you")
+                print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
+                print("you are stabbed and die")
                 
             elif answer ==  b or answer == "b":
                 print("the goblins start running towards you")
@@ -101,12 +103,56 @@ while True:
                 answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
                 if answer == a or answer == "a":
-                    print("you hit one of the goblins in the face he takes 5 damage")
+                    print("you hit one of the goblins in the face he takes 5 damage ")
+                    if has_spear == True:
+                        print("you also hit them with your spear you deal 10 damage total")
+                        print("you have killed a goblin 2 left")
+                        print("the goblins both stab you and you take 5 damage per goblin 10 damage total")
+                    else:
+                        print("the goblins each hit you for 5 damage 15 total")
+                        #--------------------------------------------attack 2----------------------------------------------------------
+                question = "how will you attack"
+                a = "melee"
+                b = "spell"
+                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
+                if answer == a or answer == "a":
+                    print("you hit one of the goblins in the face he takes 5 damage and he dies ")
+                    if has_spear == True:
+                        print("you also hit them with your spear you deal 10 damage total")
+                        print("you have killed a goblin 1 left")
+                        print("the goblin stabs you and you take 5 damage per goblin 5 damage total")
 
+                    else:
+                        print("the goblins each hit you for 5 damage 10 total")
+                
+                
+                
+                
                 elif answer ==  b or answer == "b":
-                    print("")
+                    print("you try to cast firebolt")
+                    if has_firebolt == True:
+                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 1 goblins left")
+                        print("you take 5 damage")
+                    else:
+                        print("the spell fails you hit yourself for 15 damage")
+                        print("the goblins all hit you for 5 damage each you die")
+
+
                     
+#---------------------------------------------------------------spell attack------------------------------------------------------------
+                elif answer ==  b or answer == "b":
+                    print("you try to cast firebolt")
+                    if has_firebolt == True:
+                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 2 goblins left")
+                        print("the goblins each hit you for 5 damage")
+                    else:
+                        print("the spell fails you hit yourself for 15 damage")
+                        print("the goblins all hit you for 5 damage each you die")
+                    
+                    
+
+
                 else:
                     print("that is not an answer")
                 
