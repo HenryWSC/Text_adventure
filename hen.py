@@ -1,99 +1,109 @@
+
 has_spear = False
 has_torch = False
-#starting beach
+light_house = False
+        #starting beach
 print("you run throught the woods and see a break in the trees, as you break throught the tree lines you see a beach and hear crashes of waves. you seem safe.")
 
 print("as you walk along the beach you come across a light house it seems old and abandoned")
 
 H_question = "what will you do"
-a = "continue walking along the beach"
-b = "go into the lighthouse"
+a = "Go into the light house"
+b = "continue walking along the beach"
 answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
 
-#lighthouse start
+#setting light_house true/false start
 if answer == a or answer == "a":
-        print("you walk into the lighthouse and find a chest you open it and you find a letter telling you to go to duras")
-        print("you feel compelled to go to duras and when you do you find 3 golblins blocking your path")
-#lighthouse ends
+        light_house = True
+if light_house == False:
+#setting light_house true/false end
+                if answer == b or answer == "b":
+                                print("you continue walking along the beach until you find a wrecked rowboat")
+                        
+                #wrecked boat
+                H_question2 = "what will you do"
+                a = "Investigate the boat"
+                answer = input("{}\nA.{}".format(H_question, a,)).lower()
 
-if answer == a or answer == "a":
-        print("you continue walking along the beach until you find a wrecked rowboat")
-       
-#wrecked boat
-        H_question2 = "what will you do"
-a = "Investigate the boat"
-b = "go back to light house"
-answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
+                if answer == a or answer == "a":
+                        print("you investigate the row boat and find string, a stick, a sharp flint and wood kindle")
+                        #Investigate row boat
+                H_question3 = "what will you do"
+                a = "make a spear"
+                b = "make a torch"
+                answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
+                        #Investigate row boat ends
 
-if answer == a or answer == "a":
-        print("you investigate the row boat and find string, a stick, a sharp flint and wood kindle")
-#Investigate row boat
-H_question3 = "what will you do"
-a = "make a spear"
-b = "make a torch"
-answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
-#Investigate row boat ends
+                        #making spear
+                if answer == a or answer == "a":
+                                has_torch = True
+                                print("you make a torch by wrapping string around a stick and lighting it with a flint, but the sun starts to set")
 
-#making spear
-if answer == a or answer == "a":
-        has_torch = True
-        print("you make a torch by wrapping string around a stick and lighting it with a flint, but the sun starts to set")
+                H_question3 = "what will you do"
+                a = "make a fire"
+                b = "go look for berries"
+                answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
+                        #making spear ends
+                        #making spear
+                if answer == b or answer == "b":
+                        has_spear = True
+                        print("you make a spear out of the flint and sticks but the sun starts to set")
 
-H_question3 = "what will you do"
-a = "make a fire"
-b = "go look for berries"
-answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
-#making spear ends
-#making spear
-if answer == b or answer == "b":
-        has_spear = True
-        print("you make a spear out of the flint and sticks but the sun starts to set")
+                H_question3 = "what will you do"
+                a = "make a fire"
+                b = "go look for berries"
+                answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
+                        #making spear ends
 
-H_question3 = "what will you do"
-a = "make a fire"
-b = "go look for berries"
-answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
-#making spear ends
+                        #making fire
+                if answer == a or answer == "a":
+                        print("you make a fire smoke plums up and may attract predetors")
+                        print("what do you do?")
+                                
+                        a = "put out the fire"
+                        b = "leave the fire going"
+                elif answer == b or answer == "b":
+                        #jacksons berries
+                        print("you find a bush of berries")
+                                
+                        a = ""
+                        b = ""
+                        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
+                        #making fire ends
 
-#making fire
-if answer == a or answer == "a":
-        print("you make a fire smoke plums up and may attract predetors")
+                        #wolves encounter
+                while True:
+                        if answer == a or answer == "a":
+                                question = "3 wolves appear behind you from the forest"
+                        a = "run away"
+                        b = "fight"
+                        answer = input("{}\nA.{} B.{}".format(question, a, b)).lower()
 
-elif answer == b or answer == "b":
-        print("what do you do?")
-        
-        a = "put out the fire"
-        b = "leave the fire going"
-        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
-#making fire ends
+                        if answer == a or answer == "a":
+                                print("you run away into the woods until you find a cabin")
+                                #go into jacksons
+                                
+                        elif answer ==  b or answer == "b":
+                                print("as you fight the wolfes they outnumber and overwhelm you and you die")
+                                break
+                        
+                        else:
+                                print("that is not an answer")
 
-#wolves encounter
-if answer == a or answer == "a":
-        question = "3 wolves appear behind you from the forest"
-a = "run away"
-b = "fight"
-answer = input("{}\nA.{} B.{}".format(question, a, b)).lower()
+                                #going for berries
+                        if answer == a or answer == "a":
+                                print("you find a bush of berries")
 
-if answer == a or answer == "a":
-    print("you run away into the woods until you find a cabin")
-#go into jacksons
-    
-elif answer ==  b or answer == "b":
-    print("as you fight the wolfes they outnumber and overwhelm you and you die")
-    
-else:
-    print("that is not an answer")
-
-#going for berries
-if answer == b or answer == "b":
-        print("you find a bush of berries")
-
-        question3 = "what would you like to do now "
-        a = "gather berries"
-        b = "go deeper into the woods"
-        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
-#berries go to jackson
-       
+                        question3 = "what would you like to do now "
+                        a = "gather berries"
+                        b = "you go into the cabin"
+                        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
+                                #berries go to jackson
+else:  
+                        print("you walk into the lighthouse and find a chest you open it and you find a letter telling you to go to duras")
+                        print("you feel compelled to go to duras and when you do you find 3 golblins blocking your path")
+                        #lighthouse ends      
+        #go to golbin encounter
 
 
 
