@@ -66,51 +66,60 @@ while True:
         print("you find a cabin!")
         print("you see a small chest in the middle of the room")
         print("you open it an see a spell scroll that contains firebolt")
-        firebolt = True
+        has_firebolt = True
         print("you look around the cabin and see a beadroom with studded leather armor on a stand in the corner")
         
         question = "what will you do"
         a = "put on the armor"
         b = "go to sleep"
-        c = "check other rooms of the cabin"
-        answer = input("{}\nA.{} B.{} C.{}".format(question, a, b, c)).lower()
+        answer = input("{}\nA.{} B.{}".format(question, a, b,)).lower()
 
         if answer == a or answer == "a":
             print("you put the armor on and now you have 10 more hp")
             has_leather_armor = True
-
-#-----------------------------------path to gobbs answer b---------------------------------
-        elif answer ==  b or answer == "b":
+            print("you explore the house and find a bed on fall down and go to sleep")
             print("misterious creature visits you while you are asleep telling you to go to duras")
             print("when you wake up you feel compelled to go to duras")
             print("along the way you see 3 goblins gurading the gate to duras")
             print("the notice you and draw their daggers")
-            question = "what will you do"
-            a = "run"
-            b = "fight"
-            answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
-
-            if answer == a or answer == "a":
-                print("you try to run from the goblins but they throw a dagger at you")
-                print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
-                print("you are stabbed and die")
-                
-            elif answer ==  b or answer == "b":
-                print("the goblins start running towards you")
-                question = "how will you attack"
-                a = "melee"
-                b = "spell"
+            while True:
+                question = "what will you do"
+                a = "run"
+                b = "fight"
                 answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
                 if answer == a or answer == "a":
-                    print("you hit one of the goblins in the face he takes 5 damage ")
-                    if has_spear == True:
-                        print("you also hit them with your spear you deal 10 damage total")
-                        print("you have killed a goblin 2 left")
-                        print("the goblins both stab you and you take 5 damage per goblin 10 damage total")
-                    else:
-                        print("the goblins each hit you for 5 damage 15 total")
-                        #--------------------------------------------attack 2----------------------------------------------------------
+                    print("you try to run from the goblins but they throw a dagger at you")
+                    print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
+                    print("you are stabbed and die")
+                    
+                elif answer ==  b or answer == "b":
+                    print("the goblins start running towards you")
+                    #-------------------------------------------------------------attack 1-----------------------------------------------------
+                    question = "how will you attack"
+                    a = "melee"
+                    b = "spell"
+                    answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+                    if answer == a or answer == "a":
+                        print("you hit one of the goblins in the face he takes 5 damage")
+                        if has_spear == True:
+                            print("you also hit them with your spear you deal 10 damage total")
+                            print("you have killed a goblin 2 left")
+                            print("the goblins both stab you and you take 5 damage per goblin 10 damage total")
+                        else:
+                            print("the goblins each hit you for 5 damage 15 total")
+                    
+                    elif answer ==  b or answer == "b":
+                        print("you try to cast firebolt")
+                        if has_firebolt == True:
+                            print("the cast is succsesful you hit a goblin for 10 damage and he dies 2 goblins left")
+                            print("the goblins each hit you for 5 damage 10 total")
+                        else:
+                            print("the spell fails you hit yourself for 15 damage")
+                            print("the goblins all hit you for 5 damage each you die")
+                            break
+                            #--------------------------------------------attack 2----------------------------------------------------------
                 question = "how will you attack"
                 a = "melee"
                 b = "spell"
@@ -125,42 +134,166 @@ while True:
 
                     else:
                         print("the goblins each hit you for 5 damage 10 total")
-                
-                
-                
+
                 
                 elif answer ==  b or answer == "b":
                     print("you try to cast firebolt")
                     if has_firebolt == True:
                         print("the cast is succsesful you hit a goblin for 10 damage and he dies 1 goblins left")
-                        print("you take 5 damage")
                     else:
                         print("the spell fails you hit yourself for 15 damage")
                         print("the goblins all hit you for 5 damage each you die")
+                        break
+                
+                
+                #------------------------------------------attack 3-------------------------
+                question = "how will you attack"
+                a = "melee"
+                b = "spell"
+                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
+                if answer == a or answer == "a":
+                    print("you hit one of the goblins in the face he takes 5 damage")
+                    if has_spear == True:
+                        print("you also hit them with your spear you deal 10 damage total")
+                        print("you have killed a goblin 0 left")
+                        print("you have killed all the goblins nice")
 
-                    
-#---------------------------------------------------------------spell attack------------------------------------------------------------
+                    else:
+                        print("the goblins each hit you for 5 damage 10 total")
+                        print("you die")
+                        break
+                
+                
+                
                 elif answer ==  b or answer == "b":
                     print("you try to cast firebolt")
                     if has_firebolt == True:
-                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 2 goblins left")
-                        print("the goblins each hit you for 5 damage")
+                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 0 goblins left")
+                        print("you have killed all the goblins nice")
                     else:
                         print("the spell fails you hit yourself for 15 damage")
                         print("the goblins all hit you for 5 damage each you die")
-                    
-                    
-
-
-                else:
-                    print("that is not an answer")
+                        break
                 
-               
-            elif answer ==  c or answer == "c":
-                print("you find a kitchen with food")
-            else:
-                print("that is not an answer")
+                
+                print("you may now enter duras")
+                print("this is the end of your travels adventurer")
+                print("you win")
+                break
+            
+
+#-----------------------------------path to gobbs answer b---------------------------------
+        elif answer ==  b or answer == "b":
+            print("misterious creature visits you while you are asleep telling you to go to duras")
+            print("when you wake up you feel compelled to go to duras")
+            print("along the way you see 3 goblins gurading the gate to duras")
+            print("the notice you and draw their daggers")
+            while True:
+                question = "what will you do"
+                a = "run"
+                b = "fight"
+                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+                if answer == a or answer == "a":
+                    print("you try to run from the goblins but they throw a dagger at you")
+                    print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
+                    print("you are stabbed and die")
+                    
+                elif answer ==  b or answer == "b":
+                    print("the goblins start running towards you")
+                    #-------------------------------------------------------------attack 1-----------------------------------------------------
+                    question = "how will you attack"
+                    a = "melee"
+                    b = "spell"
+                    answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+                    if answer == a or answer == "a":
+                        print("you hit one of the goblins in the face he takes 5 damage")
+                        if has_spear == True:
+                            print("you also hit them with your spear you deal 10 damage total")
+                            print("you have killed a goblin 2 left")
+                            print("the goblins both stab you and you take 5 damage per goblin 10 damage total")
+                        else:
+                            print("the goblins each hit you for 5 damage 15 total")
+                    
+                    elif answer ==  b or answer == "b":
+                        print("you try to cast firebolt")
+                        if has_firebolt == True:
+                            print("the cast is succsesful you hit a goblin for 10 damage and he dies 2 goblins left")
+                            print("the goblins each hit you for 5 damage 10 total")
+                        else:
+                            print("the spell fails you hit yourself for 15 damage")
+                            print("the goblins all hit you for 5 damage each you die")
+                            break
+                            #--------------------------------------------attack 2----------------------------------------------------------
+                question = "how will you attack"
+                a = "melee"
+                b = "spell"
+                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+                if answer == a or answer == "a":
+                    print("you hit one of the goblins in the face he takes 5 damage and he dies ")
+                    if has_spear == True:
+                        print("you also hit them with your spear you deal 10 damage total")
+                        print("you have killed a goblin 1 left")
+                        print("the goblin stabs you and you take 5 damage per goblin 5 damage total")
+
+                    else:
+                        print("the goblins each hit you for 5 damage 10 total")
+
+                
+                elif answer ==  b or answer == "b":
+                    print("you try to cast firebolt")
+                    if has_firebolt == True:
+                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 1 goblins left")
+                    else:
+                        print("the spell fails you hit yourself for 15 damage")
+                        print("the goblins all hit you for 5 damage each you die")
+                        break
+                
+                
+                #------------------------------------------attack 3-------------------------
+                question = "how will you attack"
+                a = "melee"
+                b = "spell"
+                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+
+                if answer == a or answer == "a":
+                    print("you hit one of the goblins in the face he takes 5 damage")
+                    if has_spear == True:
+                        print("you also hit them with your spear you deal 10 damage total")
+                        print("you have killed a goblin 0 left")
+                        print("you have killed all the goblins nice")
+
+                    else:
+                        print("the goblins each hit you for 5 damage 10 total")
+                        print("you die")
+                        break
+                
+                
+                
+                elif answer ==  b or answer == "b":
+                    print("you try to cast firebolt")
+                    if has_firebolt == True:
+                        print("the cast is succsesful you hit a goblin for 10 damage and he dies 0 goblins left")
+                        print("you have killed all the goblins nice")
+                    else:
+                        print("the spell fails you hit yourself for 15 damage")
+                        print("the goblins all hit you for 5 damage each you die")
+                        break
+                
+                
+                print("you may now enter duras")
+                print("this is the end of your travels adventurer")
+                print("you win")
+                break
+
+
+                    
+
+                    
+                
 
         
 
@@ -205,21 +338,5 @@ while True:
 
 
     break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 print("gg")
