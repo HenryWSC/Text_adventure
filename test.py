@@ -297,7 +297,6 @@ while True:
         
 
     #----------------------------east / short sidetrack---------------------
-    elif answer == b or answer == "b":
         print("you find a bush of berries")
         
         question3 = "what would you like to do now "
@@ -381,7 +380,7 @@ while True:
                         
                 if answer == b or answer == "b":
                         has_spear = True
-                        print("gg")
+                        print("using the materials you see you make a spear")
 
                         #making fire
                 if answer == a or answer == "a":
@@ -390,42 +389,8 @@ while True:
                                 
                         a = "put out the fire"
                         b = "leave the fire going"
-                elif answer == b or answer == "b":
-                        #jacksons berries
-                        print("you find a bush of berries")
-                                
-                        a = "gg"
-                        b = "gg"
-                        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
-                        #making fire ends
-
-                        #wolves encounter
-                while True:
-                        if answer == a or answer == "a":
-                                question = "3 wolves appear behind you from the forest"
-                        a = "run away"
-                        b = "fight"
-                        answer = input("{}\nA.{} B.{}".format(question, a, b)).lower()
-
-                        if answer == a or answer == "a":
-                                print("you run away into the woods until you find a cabin")
-                                #go into jacksons
-                                
-                        elif answer ==  b or answer == "b":
-                                print("as you fight the wolfes they outnumber and overwhelm you and you die")
-                                break
-                        
-                        else:
-                                print("that is not an answer")
-
-                                #going for berries
-                        if answer == a or answer == "a":
-                                print("you find a bush of berries")
-
-                        question3 = "what would you like to do now "
-                        a = "gather berries"
-                        b = "you go into the cabin"
-                        answer = input("{}\nA.{} B.{}".format(H_question, a, b, )).lower()
+                        #berries
+                
                                 #berries go to jackson
 else:  
                             print("you walk into the lighthouse and find a chest you open it and you find a letter telling you to go to duras")
