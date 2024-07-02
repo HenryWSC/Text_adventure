@@ -1,5 +1,4 @@
 arcana = 0
-MAX_ARCANA = 30
 hp = 20
 has_firebolt = False
 has_leather_armour = False 
@@ -82,16 +81,14 @@ while True:
             print("when you wake up you feel compelled to go to duras")
             print("along the way you see 3 goblins gurading the gate to duras")
             print("the notice you and draw their daggers")
-            while True:
-                question = "what will you do"
-                a = "run"
-                b = "fight"
-                answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
+            question = "what will you do"
+            a = "run"
+            b = "fight"
+            answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
+            while True:    
                 if answer == a or answer == "a":
-                    print("you try to run from the goblins but they throw a dagger at you")
-                    print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
-                    print("you are stabbed and die")
+                    print("the goblins break your legs no more running")
                     
                 elif answer ==  b or answer == "b":
                     print("the goblins start running towards you")
@@ -196,9 +193,7 @@ while True:
                 answer = input("{}\nA.{} B.{}".format(question, a, b, )).lower()
 
                 if answer == a or answer == "a":
-                    print("you try to run from the goblins but they throw a dagger at you")
-                    print("the dagger hits you a the back of the leg you fall over and the goblins pounce")
-                    print("you are stabbed and die")
+                    print("no running this time")
                     
                 elif answer ==  b or answer == "b":
                     print("the goblins start running towards you")
