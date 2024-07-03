@@ -1,6 +1,5 @@
 
-has_spear = False
-has_torch = False
+
 light_house = False
         #starting beach
 print("you run throught the woods and see a break in the trees, as you break throught the tree lines you see a beach and hear crashes of waves. you seem safe.")
@@ -34,26 +33,23 @@ if light_house == False:
                 answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
                         #Investigate row boat ends
 
-                        #making spear
-                if answer == a or answer == "a":
+                        #making spear and torch
+                if answer == b or answer == "b":
                                 has_torch = True
                                 print("you make a torch by wrapping string around a stick and lighting it with a flint, but the sun starts to set")
+                answer == b or answer == "b"
+                has_spear = True
+                print("you make a spear out of the flint and sticks but the sun starts to set")
 
                 H_question3 = "what will you do"
                 a = "make a fire"
                 b = "go look for berries"
                 answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
                         #making spear ends
-                        #making spear
+                        
                 if answer == b or answer == "b":
                         has_spear = True
-                        print("you make a spear out of the flint and sticks but the sun starts to set")
-
-                H_question3 = "what will you do"
-                a = "make a fire"
-                b = "go look for berries"
-                answer = input("{}\nA.{} B.{}".format(H_question, a, b,)).lower()
-                        #making spear ends
+                        print("")
 
                         #making fire
                 if answer == a or answer == "a":
